@@ -12,7 +12,7 @@ public class Menu{
         return foodMenu;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return foodPrice;
     }    
 }
