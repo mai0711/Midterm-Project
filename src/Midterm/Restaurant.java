@@ -33,7 +33,7 @@ public class Restaurant {
       System.out.println("-----------------------------------------");
       MenuArray.menuArray(); //  each menu item and price
       System.out.println("-----------------------------------------");
-      System.out.println("|              Order form                |");
+      System.out.println("|               Order form               |");
       System.out.println("-----------------------------------------");
       
       Scanner scanner = new Scanner(System.in);
@@ -132,7 +132,7 @@ public class Restaurant {
     break;
    case 2:
     System.out.println("-----------------------------------------");
-    System.out.println("|         Your order is complete!        |");
+    System.out.println("|                Cancel!                 |");
     System.out.println("-----------------------------------------");
     break;
   default:
