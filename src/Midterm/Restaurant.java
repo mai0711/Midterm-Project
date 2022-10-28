@@ -34,7 +34,7 @@ public class Restaurant {
 
      
       System.out.println("-----------------------------------------");
-      System.out.println("Our menu:");
+      System.out.println("Menu:");
 
       MenuArray.menuArray();
       System.out.println("-----------------------------------------");
@@ -45,30 +45,55 @@ public class Restaurant {
       Scanner scanner = new Scanner(System.in);
       String name;
       String order = "";
-      double quantity = 0.0;
+      int quantity = 0;
       int option = 0;
+      boolean loop = true;
 
 
-      do{
+      
       System.out.println("Please enter your name ");
       name = scanner.nextLine();
 
-      try {
 
 
-      System.out.println("Please enter your order");
+    while(loop){
+      
+    try {
+      System.out.println("Please enter your order ");
       option = scanner.nextInt();
-      break;
+      loop = false;
+
+      
     }catch (InputMismatchException e){
       scanner.next();
-      System.out.println("Error");
+      System.out.println("Error!"); 
+
     }
+  }
+
+  loop = true;
+  while(loop){
       
+    try {
+      System.out.println("Please enter your quantity ");
+      quantity = scanner.nextInt();
+      loop = false;
+
+      
+    }catch (InputMismatchException e){
+      scanner.next();
+      System.out.println("Error!"); 
+
+    }
+  }
+      
+  
 
       System.out.println("-----------------------------------------");
-      System.out.println("Your order:");
+      System.out.println("Order confirmation:");
+      System.out.println("-----------------------------------------");
       System.out.println("Your name: " + name);
-      System.out.println("Your order: " + order);
+      System.out.println("Your order: " + option );
       System.out.println("Quantity: " + quantity);
 
       switch(option){
@@ -88,11 +113,12 @@ public class Restaurant {
         System.out.println("Total: " + pasta.getPrice()*quantity);
         break;
         default:
-        System.out.println("Error");
+        System.out.println("default");
         break;
       }
-     
-     }while(option != 5);
-     System.out.println();
-}
+    
+    
+    scanner.close();
+    
+  }
 }
