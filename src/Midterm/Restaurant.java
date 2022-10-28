@@ -48,8 +48,13 @@ public class Restaurant {
   while(loop){  
     try {
       System.out.println("Please enter your order number from 1 to 5 ");
-            option = scanner.nextInt();
-            loop = false;
+      option = scanner.nextInt();
+
+      if(option >= 1 || option <= 5){
+        loop = false;
+      }
+      System.out.println("Error: You should type between 1 - 5");
+      loop = true;
       
     }catch (InputMismatchException e){
       scanner.next();
