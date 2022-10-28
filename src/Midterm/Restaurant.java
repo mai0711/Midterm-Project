@@ -50,11 +50,12 @@ public class Restaurant {
       System.out.println("Please enter your order number from 1 to 5 ");
       option = scanner.nextInt();
 
-      if(option >= 1 || option <= 5){
+      if(option >= 1 && option <= 5){
         loop = false;
+      } else{
+        System.out.println("Error: You should type between 1 - 5");
+        loop = true;
       }
-      System.out.println("Error: You should type between 1 - 5");
-      loop = true;
       
     }catch (InputMismatchException e){
       scanner.next();
@@ -62,6 +63,7 @@ public class Restaurant {
       System.out.println("Error! Please reenter the numbers from 1 to 5! "); 
       System.out.println("-----------------------------------------------");
     }
+    option = 0;
   }
 
   loop = true;
@@ -127,6 +129,8 @@ public class Restaurant {
     System.out.println("Please select '1' or '2' ");
     System.out.println("1 : Confirm the order");
     System.out.println("2 : Cancel");
+
+  try {
     int a = 0;
     a = scanner.nextInt();
   switch(a){
@@ -146,7 +150,11 @@ public class Restaurant {
     System.out.println("-----------------------------------------");
     break;
   }
-
+} catch(Exception e){
+  System.out.println("------------------------------------------");
+  System.out.println("|Error! Please reenter from the beginning!|");
+  System.out.println("------------------------------------------");
+}
     scanner.close();
   }
 }
