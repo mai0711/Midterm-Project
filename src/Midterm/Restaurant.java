@@ -1,5 +1,5 @@
 package Midterm;
-import java.rmi.StubNotFoundException;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -120,7 +120,7 @@ public class Restaurant {
    }
     System.out.println("-----------------------------------------");
     System.out.println("Please select '1' or '2' ");
-    System.out.println("1 : Order");
+    System.out.println("1 : Confirm the order");
     System.out.println("2 : Cancel");
     int a = 0;
     a = scanner.nextInt();
